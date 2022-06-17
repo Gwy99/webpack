@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("tab栏完成了"),console.log("轮播图完成了")})();
