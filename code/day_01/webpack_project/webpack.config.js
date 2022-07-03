@@ -1,5 +1,6 @@
 const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 module.exports = {
     mode: 'development',
     //指定入口，相对路径
@@ -14,7 +15,7 @@ module.exports = {
         new HTMLWebpackPlugin({
             // 绝对路径
             template: path.join(__dirname, 'public/index.html')
-        })
+        }), new MiniCssExtractPlugin()
     ],
     devServer: {
         open: true,
@@ -22,10 +23,10 @@ module.exports = {
     module: {
         rules: [{
             test: /\.css/i,
-            use: ["style-loader", "css-loader"]
+            use: [MiniCssExtractPlugin.loader, "css-loader"]
         }, {
             test: /\.less/i,
-            use: ["style-loader", "css-loader", "less-loader"]
+            use: [MiniCssExtractPlugin.loader, "css-loader", "less-loader"]
         }, {
             test: /\.(png|gif|jpeg)/i,
             // type: 'asset/resource',

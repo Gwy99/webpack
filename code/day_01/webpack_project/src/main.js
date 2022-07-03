@@ -3,6 +3,7 @@ import { marqueen } from './marqueen'
 tab()
 marqueen()
 
+import './styles/style.css'
 import './styles/index.css'
 import './styles/tab.less'
 

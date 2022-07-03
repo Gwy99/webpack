@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "iconfont";
+  /* Project id  */
+  src: url('iconfont.ttf?t=1654058774909') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 25px;
+  color: rgb(90, 90, 90);
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-user:before {
+  content: "\e6ef";
+}
+
+.icon-shangpinliebiao:before {
+  content: "\e767";
+}
+
+.icon-sousuo:before {
+  content: "\e7b3";
+}

@@ -33,7 +33,7 @@ const fn = () => {
 console.log(fn());
 
 //引入vue
-import App from './app.vue' // 根vue文件
+import App from './App.vue' // 根vue文件
 import Vue from 'vue' // 引入vue.js对象
 
 new Vue({

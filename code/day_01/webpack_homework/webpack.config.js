@@ -2,6 +2,7 @@ const path = require('path')
     // 引入自动生成 html 的插件
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
+const EslintWebpackPlugin = require('eslint-webpack-plugin')
 module.exports = {
     mode: 'development',
     entry: "./src/main.js", // 入口
@@ -15,7 +16,10 @@ module.exports = {
             //绝对路径
             template: path.join(__dirname, 'public/index.html')
         }),
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
+        new EslintWebpackPlugin({
+            context: path.join(__dirname, 'src/')
+        })
     ],
     devServer: {
         port: 30000,
